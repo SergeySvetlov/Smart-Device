@@ -1,0 +1,187 @@
+.goods {
+  background-color: $color-black-pearl;
+  padding: 65px 0 140px 0;
+  margin: 0;
+
+  & .container {
+    color: $color-default-white;
+  }
+
+  & p {
+    font-family: $ff-RobotoCondensed;
+    font-size: 36px;
+    line-height: 51px;
+    width: 800px;
+    margin: 0 0 50px 0;
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: 350px 350px 350px;
+    gap: 85px;
+  }
+
+  &__link {
+    padding: 50px 0 0 40px;
+    height: 650px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &__link--first {
+    background-image: url("../img/first-good.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/first-good@2x.jpg");
+      background-size: 350px auto;
+    }
+  }
+
+  &__link--second {
+    background-image: url("../img/second-good.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/second-good@2x.jpg");
+      background-size: 350px auto;
+    }
+  }
+
+  &__link--third {
+    background-image: url("../img/third-good.jpg");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/third-good@2x.jpg");
+      background-size: 350px auto;
+    }
+  }
+
+  &__link h3 {
+    font-family: $ff-RobotoCondensed;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 30px;
+    margin: 0;
+    width: 170px;
+  }
+
+  &__button {
+    display: block;
+    width: 60px;
+    height: 60px;
+    margin: auto 0 0 auto;
+    border-radius: 3px 0 0 0;
+    padding: 26.19px 0 0 30.48px;
+    background-color: $color-deep-sky-blue;
+  }
+
+  &__link-svg {
+    display: block;
+  }
+}
+
+@include vp-1023 {
+  .goods {
+    padding: 60px 0 75px 0;
+
+    & p {
+      width: 670px;
+    }
+
+    &__list {
+      grid-template-columns: 670px;
+      gap: 30px;
+    }
+
+    &__link {
+      padding: 40px 0 0 45px;
+      height: 250px;
+    }
+
+    &__link--first {
+      background-image: url("../img/first-good-tablet.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/first-good-tablet@2x.jpg");
+        background-size: 670px auto;
+      }
+    }
+
+    &__link--second {
+      background-image: url("../img/second-good-tablet.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/second-good-tablet@2x.jpg");
+        background-size: 670px auto;
+      }
+    }
+
+    &__link--third {
+      background-image: url("../img/third-good-tablet.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/third-good-tablet@2x.jpg");
+        background-size: 670px auto;
+      }
+    }
+
+    &__link h3 {
+      width: 150px;
+    }
+  }
+}
+
+@include vp-767 {
+  .goods {
+    padding: 50px 0 86px 0;
+
+    & p {
+      font-size: 28px;
+      line-height: 39.38px;
+      width: 270px;
+    }
+
+    &__list {
+      grid-template-columns: 270px;
+    }
+
+    &__link {
+      padding: 30px 0 0 30px;
+      height: 250px;
+    }
+
+    &__link--first {
+      background-image: url("../img/first-good-mobile.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/first-good-mobile@2x.jpg");
+        background-size: 270px auto;
+      }
+    }
+
+    &__link--second {
+      background-image: url("../img/second-good-mobile.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/second-good-mobile@2x.jpg");
+        background-size: 270px auto;
+      }
+    }
+
+    &__link--third {
+      background-image: url("../img/third-good-mobile.jpg");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/third-good-mobile@2x.jpg");
+        background-size: 270px auto;
+      }
+    }
+
+    &__link h3 {
+      font-size: 18px;
+      width: 150px;
+    }
+  }
+}
