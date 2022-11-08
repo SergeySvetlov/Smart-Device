@@ -10,7 +10,6 @@
     <link rel="icon" href="favicon.ico"> <!-- 16×16 -->
     <link rel="icon" href="img/favicons/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="img/favicons/apple.png"> <!-- 180×180 -->
-    <link rel="manifest" href="manifest.webmanifest">
     <link rel="preload" href="fonts/RobotoCondensed-Bold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
     <link rel="preload" href="fonts/RobotoCondensed-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
   </head>
@@ -30,7 +29,7 @@
                 <use xlink:href="img/sprite/sprite.svg#email"></use>
               </svg>
             </span>
-            <span class="header__link-text">info@sd.ru</span>
+            <span>info@sd.ru</span>
           </a>
           <a class="header__link" href="tel:+74950005252">
             <span class="header__link-icon">
@@ -38,7 +37,7 @@
                 <use xlink:href="img/sprite/sprite.svg#phone-call"></use>
               </svg>
             </span>
-            <span class="header__link-text">+7 (495) 000 52 52</span>
+            <span>+7 (495) 000 52 52</span>
           </a>
           <a class="header__button" href="#">ЗАКАЗАТЬ ЗВОНОК</a>
         </div>
@@ -81,7 +80,11 @@
               Мы поставляем электронные комплектующие, производим печатные платы и предоставляем мировые технологии с 1997 года. Выполняем срочные заказы и пилотные образцы до 10 дней. <br><br>
               Наши поставщики - мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и комплектующие Service Devices применяются на предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.
             </p>
-            <a class="about__button">ПОДРОБНЕЕ</a>
+            <p id="paragraph">
+              Smart Device - это команда профессионалов. Через нас прошло более 1 000 000 клиентов, 70% из которых продолжают сотрудничество по сей день. На данный момент насчитывается более 14 офисов по всей стране и 20 городов присутствия. <br><br>
+              Мы стремимся к постоянному развитию и повышению уровня качества продукции, производимой внутри компании. Использование инновационных технологий помогает экономить деньги и время наших клиентов
+            </p>
+            <button type="button" class="about__button" data-open-full="about">ПОДРОБНЕЕ</button>
           </div>
         </section>
         <section class="goods">
@@ -154,7 +157,7 @@
       <footer class="footer">
         <div class="container">
           <section class="footer__head">
-            <div class="footer__head-contaier">
+            <div class="footer__head-container">
               <h2 class="visually-hidden">Логотип и социальные сети</h2>
               <a class="footer__logo">
                 <picture>
@@ -243,16 +246,16 @@
           <p>Оставьте контакты, мы проконсультируем вас бесплатно в удобное время</p>
           <form class="modal__form">
             <fieldset class="modal__fieldset">
-              <label class="visually-hidden" for="name">Имя</label>
-              <input placeholder="Имя" type="text" name="name" id="name">
+              <label class="visually-hidden" for="modal-name">Имя</label>
+              <input placeholder="Имя" type="text" name="name" id="modal-name">
             </fieldset>
             <fieldset class="modal__fieldset">
-              <label class="visually-hidden" for="tel">Телефон</label>
-              <input placeholder="Телефон" type="tel" name="tel" id="tel">
+              <label class="visually-hidden" for="modal-tel">Телефон</label>
+              <input placeholder="Телефон" type="tel" name="tel" id="modal-tel">
             </fieldset>
             <fieldset class="modal__fieldset">
-              <label class="visually-hidden" for="textarea">Вопрос</label>
-              <textarea placeholder="Ваш вопрос" name="textarea" id="textarea"></textarea>
+              <label class="visually-hidden" for="modal-textarea">Вопрос</label>
+              <textarea placeholder="Ваш вопрос" name="textarea" id="modal-textarea"></textarea>
             </fieldset>
             <button class="modal__button" type="submit">ОТПРАВИТЬ</button>
             <fieldset class="modal__fieldset">

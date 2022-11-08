@@ -26,6 +26,14 @@
     margin: 0 0 40px 0;
   }
 
+  & p:nth-child(n+3) {
+    display: none;
+  }
+
+  & p:nth-child(n+3).is-open {
+    display: block;
+  }
+
   &__button {
     font-family: $ff-RobotoCondensed;
     font-weight: 700;
@@ -37,6 +45,7 @@
     border-radius: 3px;
     border: 1px solid $color-deep-sky-blue;
     display: block;
+    background-color: $color-transparent;
     text-align: center;
     width: 180px;
   }
