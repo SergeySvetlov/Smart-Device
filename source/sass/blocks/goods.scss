@@ -84,10 +84,11 @@
 
 @include vp-1023 {
   .goods {
-    padding: 60px 0 75px 0;
+    padding: 55px 0 75px 0;
 
     & p {
       width: 670px;
+      margin: 0 0 40px 0;
     }
 
     &__list {
@@ -96,7 +97,7 @@
     }
 
     &__link {
-      padding: 40px 0 0 45px;
+      padding: 35px 0 0 45px;
       height: 250px;
     }
 

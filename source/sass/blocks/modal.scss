@@ -59,7 +59,7 @@
     position: relative;
     background-color: $color-deep-sky-blue;
     border-radius: 3px;
-    padding: 40px;
+    padding: 35px 40px 40px 40px;
   }
 
   & h2 {
@@ -69,13 +69,13 @@
     font-size: 30px;
     line-height: 42.19px;
     width: 400px;
-    margin: 0 0 15px 0;
+    margin: 0 0 6px 0;
   }
 
   & p {
     display: block;
     width: 380px;
-    margin: 0 0 40px 0;
+    margin: 0 0 38px 0;
   }
 
   &__form {
@@ -124,7 +124,7 @@
       border-radius: 3px;
       background-color: rgba(4, 20, 39, 0.15);
       padding: 25px 15px 15px 15px;
-      margin: 0 0 35px 0;
+      margin: 0 0 25px 0;
 
       &::-webkit-input-placeholder {
         color: $color-default-white;

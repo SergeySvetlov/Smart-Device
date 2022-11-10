@@ -79,15 +79,35 @@
 
 @include vp-1023 {
   .advantages {
-    margin: 0 0 80px 0;
+    margin: 0 0 78px 0;
 
     &__list {
       grid-template-columns: 320px 320px;
     }
 
     &__item {
-      padding: 95px 30px 35px 45px;
+      padding: 92px 30px 35px 45px;
       min-height: 360px;
+
+      h3 {
+        margin: 0 0 10px 0;
+      }
+
+      &--detective {
+        padding: 88px 45px 35px 45px;
+      }
+
+      &--tag {
+        padding: 85px 45px 35px 45px;
+      }
+
+      &--detective h3 {
+        margin: 0 0 6px 0;
+      }
+
+      &--tag h3 {
+        margin: 0 0 5px 0;
+      }
     }
   }
 }

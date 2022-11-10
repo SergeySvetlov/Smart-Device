@@ -57,7 +57,20 @@
 
     & .container {
       min-height: 380px;
-      padding: 0 50px 0 179px;
+      padding: 0 50px 0 225px;
+      background-position: 45px top;
+    }
+
+    & h2 {
+      font-family: $ff-RobotoCondensed;
+      font-size: 36px;
+      line-height: 50.63px;
+      margin: 0 0 9px 0;
+    }
+
+    & p {
+      line-height: 21.5px;
+      margin: 0 0 17px 0;
     }
   }
 }

@@ -1,6 +1,7 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initModals} from './modules/modals/init-modals';
 import {initLinks, initContacts} from './modules/accordions/accordion';
+import {editText} from './modules/feedback/feedback';
 
 // ---------------------------------
 
@@ -20,8 +21,10 @@ window.addEventListener('DOMContentLoaded', () => {
     initModals();
     initLinks();
     initContacts();
+    editText();
   });
 });
+
 
 // ---------------------------------
 

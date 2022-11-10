@@ -70,7 +70,7 @@
 
     &__link {
       width: min-content;
-      margin: 0 20px 0 0;
+      margin: -11px 20px 0 0;
     }
 
     &__link-icon + span {
@@ -86,7 +86,7 @@
 @include vp-767 {
   .header {
     .container {
-      padding: 10px 15px 20px 26px;
+      padding: 16px 15px 20px 26px;
     }
 
     &__logo {
