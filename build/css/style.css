@@ -1034,9 +1034,7 @@ button,
 
 .general {
   background-color: #041827;
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../img/background-general.jpg");
-  background: -o-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/background-general.jpg");
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/background-general.jpg");
+  background-image: url("../img/background.jpg");
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1127,6 +1125,11 @@ button,
   background-color: rgba(255, 255, 255, 0);
   text-align: center;
   width: 180px;
+  cursor: pointer;
+}
+
+.about__button:hover {
+  opacity: 0.7;
 }
 
 .advantages {
@@ -1240,6 +1243,7 @@ button,
 
 .goods__link {
   padding: 50px 0 0 40px;
+  width: 350px;
   height: 650px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1248,18 +1252,33 @@ button,
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
 }
 
-.goods__link--first {
-  background-image: url("../img/first-good.jpg");
+.goods__img {
+  position: absolute;
+  max-width: none;
+  -o-object-fit: cover;
+  object-fit: cover;
+  width: 1527px;
+  height: 700px;
 }
 
-.goods__link--second {
-  background-image: url("../img/second-good.jpg");
+.goods__img--first {
+  top: -50px;
+  left: -200px;
 }
 
-.goods__link--third {
-  background-image: url("../img/third-good.jpg");
+.goods__img--second {
+  top: -50px;
+  left: -550px;
+}
+
+.goods__img--third {
+  top: -50px;
+  left: -900px;
 }
 
 .goods__link h3 {
@@ -1269,6 +1288,7 @@ button,
   line-height: 30px;
   margin: 0;
   width: 170px;
+  z-index: 1;
 }
 
 .goods__button {
@@ -1279,6 +1299,7 @@ button,
   border-radius: 3px 0 0 0;
   padding: 26.19px 0 0 30.48px;
   background-color: #00b2ff;
+  z-index: 1;
 }
 
 .goods__link-svg {
@@ -1412,6 +1433,7 @@ button,
   border: none;
   border-radius: 3px;
   padding: 15px 25px 11px 25px;
+  cursor: pointer;
 }
 
 .feedback__button:hover {
@@ -1453,12 +1475,17 @@ button,
   opacity: 0.8;
 }
 
+.feedback__approval span.error {
+  color: #ff1553;
+}
+
 .feedback__approval .feedback__approval-control {
   position: relative;
   width: 15px;
   height: 15px;
   border: 1px solid #ffffff;
   border-radius: 3px;
+  cursor: pointer;
 }
 
 .feedback__approval input[type=checkbox]:checked + .feedback__approval-control::after {
@@ -1625,7 +1652,9 @@ button,
   }
 
   .container {
-    width: 770px;
+    width: 75.27%;
+    min-width: 768px;
+    max-width: 1023px;
     padding: 0 50px;
   }
 
@@ -1653,9 +1682,6 @@ button,
   }
 
   .general {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../img/background-general.jpg");
-    background: -o-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/background-general.jpg");
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/background-general.jpg");
     min-height: 640px;
     padding: 180px 0 205px 0;
     margin: 0 0 80px 0;
@@ -1754,20 +1780,24 @@ button,
   }
 
   .goods__link {
+    width: 670px;
     padding: 35px 0 0 45px;
     height: 250px;
   }
 
-  .goods__link--first {
-    background-image: url("../img/first-good-tablet.jpg");
+  .goods__img--first {
+    top: -450px;
+    left: -240px;
   }
 
-  .goods__link--second {
-    background-image: url("../img/second-good-tablet.jpg");
+  .goods__img--second {
+    top: -250px;
+    left: -670px;
   }
 
-  .goods__link--third {
-    background-image: url("../img/third-good-tablet.jpg");
+  .goods__img--third {
+    top: -310px;
+    left: -150px;
   }
 
   .goods__link h3 {
@@ -1872,25 +1902,7 @@ button,
 
 @media (max-width: 1023px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 1023px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 1023px) and (min-resolution: 2dppx) {
   .general {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../img/background-general@2x.jpg");
-    background: -o-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/background-general@2x.jpg");
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/background-general@2x.jpg");
     background-size: 770px auto;
-  }
-
-  .goods__link--first {
-    background-image: url("../img/first-good-tablet@2x.jpg");
-    background-size: 670px auto;
-  }
-
-  .goods__link--second {
-    background-image: url("../img/second-good-tablet@2x.jpg");
-    background-size: 670px auto;
-  }
-
-  .goods__link--third {
-    background-image: url("../img/third-good-tablet@2x.jpg");
-    background-size: 670px auto;
   }
 }
 
@@ -1900,7 +1912,9 @@ button,
   }
 
   .container {
-    width: 320px;
+    width: 41.72%;
+    min-width: 320px;
+    max-width: 767px;
     padding: 0 25px;
   }
 
@@ -1919,14 +1933,14 @@ button,
   }
 
   .general {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../img/background-general.jpg");
-    background: -o-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/background-general.jpg");
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/background-general.jpg");
+    background-image: url("../img/background-mobile.jpg");
     min-height: 560px;
+    width: 320px;
     padding: 150px 0 190px 0;
-    margin: 0 0 50px 0;
-    background-position: -250px top;
-    background-size: cover;
+    margin: 0 auto 50px auto;
+    background-position: left top;
+    -o-object-fit: cover;
+    object-fit: cover;
   }
 
   .general .container {
@@ -1937,6 +1951,7 @@ button,
     font-size: 36px;
     line-height: 42.19px;
     margin: 0 0 8px 0;
+    letter-spacing: 0;
   }
 
   .general p {
@@ -1948,8 +1963,10 @@ button,
 
   .general .btn {
     font-size: 14px;
+    letter-spacing: 0.05em;
     line-height: 16.41px;
-    padding: 10px 30px 10px 30px;
+    min-width: 270px;
+    padding: 13px 35px 11px 40px;
     margin: 0;
   }
 
@@ -1965,23 +1982,26 @@ button,
 
   .about h2 {
     font-family: "RobotoCondensed", "Arial", sans-serif;
+    font-weight: 400;
     font-size: 28px;
     line-height: 39.38px;
+    margin: 0 0 12px 0;
   }
 
   .about p {
     font-size: 14px;
     line-height: 18.82px;
+    margin: 0 0 16px 0;
   }
 
   .about__button {
     line-height: 16.41px;
-    padding: 8px 15px 12px 15px;
+    padding: 8px 15px 8px 15px;
     width: 160px;
   }
 
   .advantages {
-    margin: 0 0 50px 0;
+    margin: 0 0 45px 0;
   }
 
   .advantages__list {
@@ -1990,9 +2010,27 @@ button,
   }
 
   .advantages__item {
-    padding: 80px 30px 35px 30px;
+    padding: 75px 30px 35px 30px;
     min-height: 340px;
     background-position: 30px 30px;
+  }
+
+  .advantages__item--detective {
+    padding: 77px 30px 35px 30px;
+    min-height: 325px;
+  }
+
+  .advantages__item--tag {
+    padding: 77px 35px 35px 30px;
+    min-height: 325px;
+  }
+
+  .advantages__item--detective h3 {
+    margin: 0 0 15px 0;
+  }
+
+  .advantages__item--tag h3 {
+    margin: 0 0 15px 0;
   }
 
   .advantages h3 {
@@ -2006,13 +2044,14 @@ button,
   }
 
   .goods {
-    padding: 50px 0 86px 0;
+    padding: 47px 0 86px 0;
   }
 
   .goods p {
     font-size: 28px;
     line-height: 39.38px;
-    width: 270px;
+    width: 260px;
+    margin: 0 0 28px 0;
   }
 
   .goods__list {
@@ -2021,25 +2060,35 @@ button,
   }
 
   .goods__link {
-    padding: 30px 0 0 30px;
+    padding: 26px 0 0 30px;
+    width: 270px;
     height: 250px;
   }
 
-  .goods__link--first {
-    background-image: url("../img/first-good-mobile.jpg");
+  .goods__img--first {
+    top: -245px;
+    left: -390px;
   }
 
-  .goods__link--second {
-    background-image: url("../img/second-good-mobile.jpg");
+  .goods__img--second {
+    top: -450px;
+    left: -380px;
   }
 
-  .goods__link--third {
-    background-image: url("../img/third-good-mobile.jpg");
+  .goods__img--third {
+    top: -335px;
+    left: -910px;
   }
 
   .goods__link h3 {
     font-size: 18px;
-    width: 150px;
+    width: 135px;
+  }
+
+  .goods__button {
+    width: 40px;
+    height: 40px;
+    padding: 15px 0 0 20px;
   }
 
   .feedback .container {
@@ -2056,14 +2105,14 @@ button,
     font-size: 30px;
     line-height: 42.19px;
     min-width: 270px;
-    margin: 0 0 20px 0;
+    margin: 0 0 6px 0;
   }
 
   .feedback__form p {
     font-size: 14px;
     line-height: 18.82px;
     min-width: 270px;
-    margin: 0 0 40px 0;
+    margin: 0 0 30px 0;
   }
 
   .feedback__fieldset input {
@@ -2073,6 +2122,7 @@ button,
   .feedback__fieldset textarea {
     width: 270px;
     height: 180px;
+    padding: 28px 15px 15px 15px;
   }
 
   .feedback__button {
@@ -2081,7 +2131,7 @@ button,
   }
 
   .feedback__approval {
-    padding: 0;
+    padding: 0 0 0 5px;
     margin: 0 auto 0 auto;
   }
 
@@ -2112,7 +2162,7 @@ button,
   }
 
   .footer__logo {
-    margin: 0 0 15px 0;
+    margin: 0 0 10px 0;
   }
 
   .footer__links {
@@ -2122,6 +2172,7 @@ button,
   .footer__links-container {
     margin: 0 auto;
     width: 270px;
+    padding: 0 0 20px 0;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -2137,11 +2188,12 @@ button,
 
   .footer h2 {
     margin: 0;
-    padding: 20px 0 20px 0;
+    padding: 22px 0 22px 2px;
     width: 220px;
   }
 
   .footer__button {
+    margin: -4px -2px 0 0;
     display: block;
     position: relative;
     width: 15px;
@@ -2161,6 +2213,7 @@ button,
   }
 
   .footer__button::before {
+    display: none;
     position: absolute;
     content: "";
     background-color: #c4c4c4;
@@ -2173,7 +2226,8 @@ button,
   .footer__links-list {
     -ms-grid-columns: 270px;
     grid-template-columns: 270px;
-    display: none;
+    display: -ms-grid;
+    display: grid;
   }
 
   .footer__contacts {
@@ -2183,6 +2237,9 @@ button,
   .footer__contacts-container {
     margin: 0 auto;
     width: 270px;
+    padding: 0 0 5px 0;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
     -ms-flex-direction: row;
@@ -2196,67 +2253,54 @@ button,
   }
 
   .footer__contacts-container p {
-    display: none;
+    display: block;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    padding: 0 0 0 3px;
+    margin: -5px -3px 16px 0;
   }
 
   .footer__contacts-container a {
-    display: none;
-  }
-
-  .footer__links-container.is-open {
-    padding: 0 0 20px 0;
-  }
-
-  .footer__links-container.is-open .footer__button::before {
-    display: none;
-  }
-
-  .footer__links-container.is-open .footer__links-list {
-    display: -ms-grid;
-    display: grid;
-  }
-
-  .footer__contacts-container.is-open {
-    padding: 0 0 20px 0;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-  }
-
-  .footer__contacts-container.is-open .footer__button::before {
-    display: none;
-  }
-
-  .footer__contacts-container.is-open p {
+    padding: 0 0 0 3px;
+    font-size: 14px;
     display: block;
-    margin: 0 0 15px 0;
   }
 
-  .footer__contacts-container.is-open a {
+  .footer__links-container.is-closed {
+    padding: 0;
+  }
+
+  .footer__links-container.is-closed .footer__button::before {
     display: block;
+  }
+
+  .footer__links-container.is-closed .footer__links-list {
+    display: none;
+  }
+
+  .footer__contacts-container.is-closed {
+    padding: 0;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+  }
+
+  .footer__contacts-container.is-closed .footer__button::before {
+    display: block;
+  }
+
+  .footer__contacts-container.is-closed p {
+    display: none;
+  }
+
+  .footer__contacts-container.is-closed a {
+    display: none;
   }
 }
 
 @media (max-width: 767px) and (-webkit-min-device-pixel-ratio: 2), (max-width: 767px) and (-o-min-device-pixel-ratio: 2/1), (max-width: 767px) and (min-resolution: 2dppx) {
   .general {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../img/background-general@2x.jpg");
-    background: -o-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/background-general@2x.jpg");
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/background-general@2x.jpg");
-    background-size: 320px auto;
-  }
-
-  .goods__link--first {
-    background-image: url("../img/first-good-mobile@2x.jpg");
-    background-size: 270px auto;
-  }
-
-  .goods__link--second {
-    background-image: url("../img/second-good-mobile@2x.jpg");
-    background-size: 270px auto;
-  }
-
-  .goods__link--third {
-    background-image: url("../img/third-good-mobile@2x.jpg");
-    background-size: 270px auto;
+    background-image: url("../img/background-mobile@2x.jpg");
   }
 }
 
@@ -2268,30 +2312,13 @@ button,
 
 @media (-webkit-min-device-pixel-ratio: 2), (-o-min-device-pixel-ratio: 2/1), (min-resolution: 2dppx) {
   .general {
-    background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))), url("../img/background-general@2x.jpg");
-    background: -o-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/background-general@2x.jpg");
-    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("../img/background-general@2x.jpg");
+    background-image: url("../img/background@2x.jpg");
     background-size: 1920px auto;
   }
 
   .about .container {
     background-image: url("../img/2022@2x.png");
     background-size: 150px auto;
-  }
-
-  .goods__link--first {
-    background-image: url("../img/first-good@2x.jpg");
-    background-size: 350px auto;
-  }
-
-  .goods__link--second {
-    background-image: url("../img/second-good@2x.jpg");
-    background-size: 350px auto;
-  }
-
-  .goods__link--third {
-    background-image: url("../img/third-good@2x.jpg");
-    background-size: 350px auto;
   }
 
   .feedback .container {

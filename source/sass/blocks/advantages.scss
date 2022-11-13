@@ -114,16 +114,34 @@
 
 @include vp-767 {
   .advantages {
-    margin: 0 0 50px 0;
+    margin: 0 0 45px 0;
 
     &__list {
       grid-template-columns: 270px;
     }
 
     &__item {
-      padding: 80px 30px 35px 30px;
+      padding: 75px 30px 35px 30px;
       min-height: 340px;
       background-position: 30px 30px;
+
+      &--detective {
+        padding: 77px 30px 35px 30px;
+        min-height: 325px;
+      }
+
+      &--tag {
+        padding: 77px 35px 35px 30px;
+        min-height: 325px;
+      }
+
+      &--detective h3 {
+        margin: 0 0 15px 0;
+      }
+
+      &--tag h3 {
+        margin: 0 0 15px 0;
+      }
     }
 
     h3 {

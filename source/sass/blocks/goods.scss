@@ -26,36 +26,36 @@
 
   &__link {
     padding: 50px 0 0 40px;
+    width: 350px;
     height: 650px;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
   }
 
-  &__link--first {
-    background-image: url("../img/first-good.jpg");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/first-good@2x.jpg");
-      background-size: 350px auto;
-    }
+  &__img {
+    position: absolute;
+    max-width: none;
+    object-fit: cover;
+    width: 1527px;
+    height: 700px;
   }
 
-  &__link--second {
-    background-image: url("../img/second-good.jpg");
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/second-good@2x.jpg");
-      background-size: 350px auto;
-    }
+  &__img--first {
+    top: -50px;
+    left: -200px;
   }
 
-  &__link--third {
-    background-image: url("../img/third-good.jpg");
+  &__img--second {
+    top: -50px;
+    left: -550px;
+  }
 
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/third-good@2x.jpg");
-      background-size: 350px auto;
-    }
+  &__img--third {
+    top: -50px;
+    left: -900px;
   }
 
   &__link h3 {
@@ -65,6 +65,7 @@
     line-height: 30px;
     margin: 0;
     width: 170px;
+    z-index: 1;
   }
 
   &__button {
@@ -75,6 +76,7 @@
     border-radius: 3px 0 0 0;
     padding: 26.19px 0 0 30.48px;
     background-color: $color-deep-sky-blue;
+    z-index: 1;
   }
 
   &__link-svg {
@@ -97,35 +99,24 @@
     }
 
     &__link {
+      width: 670px;
       padding: 35px 0 0 45px;
       height: 250px;
     }
 
-    &__link--first {
-      background-image: url("../img/first-good-tablet.jpg");
-
-      @media (min-resolution: 2dppx) {
-        background-image: url("../img/first-good-tablet@2x.jpg");
-        background-size: 670px auto;
-      }
+    &__img--first {
+      top: -450px;
+      left: -240px;
     }
 
-    &__link--second {
-      background-image: url("../img/second-good-tablet.jpg");
-
-      @media (min-resolution: 2dppx) {
-        background-image: url("../img/second-good-tablet@2x.jpg");
-        background-size: 670px auto;
-      }
+    &__img--second {
+      top: -250px;
+      left: -670px;
     }
 
-    &__link--third {
-      background-image: url("../img/third-good-tablet.jpg");
-
-      @media (min-resolution: 2dppx) {
-        background-image: url("../img/third-good-tablet@2x.jpg");
-        background-size: 670px auto;
-      }
+    &__img--third {
+      top: -310px;
+      left: -150px;
     }
 
     &__link h3 {
@@ -136,12 +127,13 @@
 
 @include vp-767 {
   .goods {
-    padding: 50px 0 86px 0;
+    padding: 47px 0 86px 0;
 
     & p {
       font-size: 28px;
       line-height: 39.38px;
-      width: 270px;
+      width: 260px;
+      margin: 0 0 28px 0;
     }
 
     &__list {
@@ -149,40 +141,35 @@
     }
 
     &__link {
-      padding: 30px 0 0 30px;
+      padding: 26px 0 0 30px;
+      width: 270px;
       height: 250px;
     }
 
-    &__link--first {
-      background-image: url("../img/first-good-mobile.jpg");
-
-      @media (min-resolution: 2dppx) {
-        background-image: url("../img/first-good-mobile@2x.jpg");
-        background-size: 270px auto;
-      }
+    &__img--first {
+      top: -245px;
+      left: -390px;
     }
 
-    &__link--second {
-      background-image: url("../img/second-good-mobile.jpg");
-
-      @media (min-resolution: 2dppx) {
-        background-image: url("../img/second-good-mobile@2x.jpg");
-        background-size: 270px auto;
-      }
+    &__img--second {
+      top: -450px;
+      left: -380px;
     }
 
-    &__link--third {
-      background-image: url("../img/third-good-mobile.jpg");
-
-      @media (min-resolution: 2dppx) {
-        background-image: url("../img/third-good-mobile@2x.jpg");
-        background-size: 270px auto;
-      }
+    &__img--third {
+      top: -335px;
+      left: -910px;
     }
 
     &__link h3 {
       font-size: 18px;
-      width: 150px;
+      width: 135px;
+    }
+
+    &__button {
+      width: 40px;
+      height: 40px;
+      padding: 15px 0 0 20px;
     }
   }
 }

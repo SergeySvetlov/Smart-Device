@@ -1,11 +1,6 @@
 .general {
   background-color: $color-black-pearl;
-  background:
-    linear-gradient(
-    rgba(0, 0, 0, 0.7),
-    rgba(0, 0, 0, 0.7)
-    ),
-    url("../img/background-general.jpg");
+  background-image: url("../img/background.jpg");
   background-position: center top;
   background-size: cover;
   background-repeat: no-repeat;
@@ -15,12 +10,7 @@
   color: $color-alice-blue;
 
   @media (min-resolution: 2dppx) {
-    background:
-      linear-gradient(
-      rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0.7)
-      ),
-      url("../img/background-general@2x.jpg");
+    background-image: url("../img/background@2x.jpg");
     background-size: 1920px auto;
   }
 
@@ -62,12 +52,6 @@
 
 @include vp-1023 {
   .general {
-    background:
-      linear-gradient(
-      rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0.7)
-      ),
-      url("../img/background-general.jpg");
     min-height: 640px;
     padding: 180px 0 205px 0;
     margin: 0 0 80px 0;
@@ -75,12 +59,6 @@
     background-size: cover;
 
     @media (min-resolution: 2dppx) {
-      background:
-        linear-gradient(
-        rgba(0, 0, 0, 0.7),
-        rgba(0, 0, 0, 0.7)
-        ),
-        url("../img/background-general@2x.jpg");
       background-size: 770px auto;
     }
 
@@ -107,26 +85,16 @@
 
 @include vp-767 {
   .general {
-    background:
-      linear-gradient(
-      rgba(0, 0, 0, 0.7),
-      rgba(0, 0, 0, 0.7)
-      ),
-      url("../img/background-general.jpg");
+    background-image: url("../img/background-mobile.jpg");
     min-height: 560px;
+    width: 320px;
     padding: 150px 0 190px 0;
-    margin: 0 0 50px 0;
-    background-position: -250px top;
-    background-size: cover;
+    margin: 0 auto 50px auto;
+    background-position: left top;
+    object-fit: cover;
 
     @media (min-resolution: 2dppx) {
-      background:
-        linear-gradient(
-        rgba(0, 0, 0, 0.7),
-        rgba(0, 0, 0, 0.7)
-        ),
-      url("../img/background-general@2x.jpg");
-      background-size: 320px auto;
+      background-image: url("../img/background-mobile@2x.jpg");
     }
 
     & .container {
@@ -137,6 +105,7 @@
       font-size: 36px;
       line-height: 42.19px;
       margin: 0 0 8px 0;
+      letter-spacing: 0;
     }
 
     & p {
@@ -148,8 +117,10 @@
 
     & .btn {
       font-size: 14px;
+      letter-spacing: 0.05em;
       line-height: 16.41px;
-      padding: 10px 30px 10px 30px;
+      min-width: 270px;
+      padding: 13px 35px 11px 40px;
       margin: 0;
     }
   }

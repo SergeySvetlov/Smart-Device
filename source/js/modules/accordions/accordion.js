@@ -6,24 +6,38 @@ const paragraph = document.querySelector('#paragraph');
 const detailsButton = document.querySelector('[data-open-full]');
 
 const initLinks = () => {
-  links.classList.toggle('is-open');
+  links.classList.toggle('is-closed');
+  if (contacts.classList.contains('is-closed') !== true) {
+    contacts.classList.add('is-closed');
+  }
 };
 
 const initContacts = () => {
-  contacts.classList.toggle('is-open');
+  contacts.classList.toggle('is-closed');
+  if (links.classList.contains('is-closed') !== true) {
+    links.classList.add('is-closed');
+  }
 };
 
 const initDetails = () => {
   if (detailsButton.textContent === 'ПОДРОБНЕЕ') {
     detailsButton.textContent = 'СВЕРНУТЬ';
+    paragraph.classList.toggle('is-open');
   } else {
     detailsButton.textContent = 'ПОДРОБНЕЕ';
+    paragraph.classList.toggle('is-open');
   }
-  paragraph.classList.toggle('is-open');
 };
 
-linksButton.addEventListener('click', initLinks);
-contactsButton.addEventListener('click', initContacts);
-detailsButton.addEventListener('click', initDetails);
+const onLinkButtonClick = () => {
+  linksButton.addEventListener('click', initLinks);
+};
+const onContactsButtonClick = () => {
+  contactsButton.addEventListener('click', initContacts);
+};
 
-export {initLinks, initContacts};
+const onDetailsButtonClick = () => {
+  detailsButton.addEventListener('click', initDetails);
+};
+
+export {onLinkButtonClick, onContactsButtonClick, onDetailsButtonClick};

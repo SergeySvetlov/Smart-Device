@@ -139,7 +139,7 @@
     }
 
     &__logo {
-      margin: 0 0 15px 0;
+      margin: 0 0 10px 0;
     }
 
     &__links {
@@ -149,6 +149,7 @@
     &__links-container {
       margin: 0 auto;
       width: 270px;
+      padding: 0 0 20px 0;
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
@@ -157,11 +158,12 @@
 
     & h2 {
       margin: 0;
-      padding: 20px 0 20px 0;
+      padding: 22px 0 22px 2px;
       width: 220px;
     }
 
     &__button {
+      margin: -4px -2px 0 0;
       display: block;
       position: relative;
       width: 15px;
@@ -180,6 +182,7 @@
       }
 
       &::before {
+        display: none;
         position: absolute;
         content: "";
         background-color: $color-silver;
@@ -192,7 +195,7 @@
 
     &__links-list {
       grid-template-columns: 270px;
-      display: none;
+      display: grid;
     }
 
     &__contacts {
@@ -202,46 +205,54 @@
     &__contacts-container {
       margin: 0 auto;
       width: 270px;
+      padding: 0 0 5px 0;
+      flex-wrap: wrap;
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
 
       & p {
-        display: none;
+        display: block;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        padding: 0 0 0 3px;
+        margin: -5px -3px 16px 0;
       }
 
       & a {
-        display: none;
+        padding: 0 0 0 3px;
+        font-size: 14px;
+        display: block;
       }
     }
 
-    &__links-container.is-open {
-      padding: 0 0 20px 0;
+    &__links-container.is-closed {
+      padding: 0;
 
       & .footer__button::before {
-        display: none;
+        display: block;
       }
 
       & .footer__links-list {
-        display: grid;
+        display: none;
       }
     }
 
-    &__contacts-container.is-open {
-      padding: 0 0 20px 0;
-      flex-wrap: wrap;
+    &__contacts-container.is-closed {
+      padding: 0;
+      flex-wrap: nowrap;
 
       & .footer__button::before {
-        display: none;
+        display: block;
       }
 
       & p {
-        display: block;
-        margin: 0 0 15px 0;
+        display: none;
       }
 
       & a {
-        display: block;
+        display: none;
       }
     }
   }

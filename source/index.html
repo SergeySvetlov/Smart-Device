@@ -39,7 +39,7 @@
             </span>
             <span>+7 (495) 000 52 52</span>
           </a>
-          <a class="header__button" href="#">ЗАКАЗАТЬ ЗВОНОК</a>
+          <a class="header__button" href="#" data-open-modal="feedback">ЗАКАЗАТЬ ЗВОНОК</a>
         </div>
       </header>
       <main>
@@ -47,7 +47,7 @@
           <div class="container">
             <h1>ПЕЧАТНЫЕ ПЛАТЫ</h1>
             <p>производство и&nbsp;монтаж, поставка комплектующих, блоков и&nbsp;модулей</p>
-            <a class="btn" href="#" data-open-modal="feedback">ПОЛУЧИТЬ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ</a>
+            <a class="btn" href="#form" get-feedback="feedback">ПОЛУЧИТЬ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ</a>
           </div>
         </section>
         <section class="advantages">
@@ -76,7 +76,7 @@
         <section class="about">
           <div class="container">
             <h2>О&nbsp;компании</h2>
-            <p>
+            <p about-paragraph="about">
               Мы&nbsp;поставляем электронные комплектующие, производим печатные платы и&nbsp;предоставляем мировые технологии с 1997&nbsp;года. Выполняем срочные заказы и&nbsp;пилотные образцы до&nbsp;10&nbsp;дней. <br><br>
               Наши поставщики&nbsp;&mdash; мировые производители электронных компонентов: OSRAM, CREE, HOLGLITRONIC, REFOND. Печатные платы и&nbsp;комплектующие Service Devices применяются на&nbsp;предприятиях Российских Железных Дорог (РЖД), РоссАвтоПрома (ВАЗ, АвтоГАЗ), МинАтома, СпецМедТехники. Среди наших клиентов крупнейшие Производители светотехники России.
             </p>
@@ -90,10 +90,14 @@
         <section class="goods">
           <div class="container">
             <h2 class="visually-hidden">Товары и услуги</h2>
-            <p>Smart Device предлагает следующие товары и&nbsp;услуги</p>
+            <!--<p goods-paragraph="goods">Smart Device предлагает следующие товары и&nbsp;услуги</p>-->
             <ul class="goods__list">
               <li class="goods__item">
-                <a class="goods__link goods__link--first" href="#">
+                <a class="goods__link" href="#">
+                  <picture>
+                    <source type="image/webp" srcset="img/background.webp, background2x.webp 2x">
+                    <img class="goods__img goods__img--first" src="img/background.jpg" width="1920" height="880" srcset="img/background@2x.jpg 2x" alt="печатная плата" />
+                  </picture>
                   <h3>Производство печатных плат</h3>
                   <div class="goods__button">
                     <svg class="goods__link-svg" width="5" height="10" viewBox="0 0 5 10" xmlns="http://www.w3.org/2000/svg">
@@ -103,7 +107,11 @@
                 </a>
               </li>
               <li class="goods__item">
-                <a class="goods__link goods__link--second">
+                <a class="goods__link">
+                  <picture>
+                    <source type="image/webp" srcset="img/background.webp, background2x.webp 2x">
+                    <img class="goods__img goods__img--second" src="img/background.jpg" width="1920" height="880" srcset="img/background@2x.jpg 2x" alt="печатная плата" />
+                  </picture>
                   <h3>Монтаж печатных плат</h3>
                   <div class="goods__button">
                     <svg class="goods__link-svg" width="5" height="10" viewBox="0 0 5 10" xmlns="http://www.w3.org/2000/svg">
@@ -113,7 +121,11 @@
                 </a>
               </li>
               <li class="goods__item">
-                <a class="goods__link goods__link--third">
+                <a class="goods__link">
+                  <picture>
+                    <source type="image/webp" srcset="img/background.webp, background2x.webp 2x">
+                    <img class="goods__img goods__img--third" src="img/background.jpg" width="1920" height="880" srcset="img/background@2x.jpg 2x" alt="печатная плата" />
+                  </picture>
                   <h3>Комплектующие для светотехники</h3>
                   <div class="goods__button">
                     <svg class="goods__link-svg" width="5" height="10" viewBox="0 0 5 10" xmlns="http://www.w3.org/2000/svg">
@@ -125,18 +137,18 @@
             </ul>
           </div>
         </section>
-        <section class="feedback">
+        <section class="feedback" id="form">
           <div class="container">
             <form class="feedback__form">
               <h2>Остались вопросы? Задайте их&nbsp;нам!</h2>
               <p>Мы&nbsp;проконсультируем Вас бесплатно</p>
               <fieldset class="feedback__fieldset">
                 <label class="visually-hidden" for="name">Имя</label>
-                <input placeholder="Имя" type="text" name="name" id="name">
+                <input placeholder="Имя" type="text" name="name" id="name" required>
               </fieldset>
               <fieldset class="feedback__fieldset">
                 <label class="visually-hidden" for="tel">Телефон</label>
-                <input placeholder="Телефон" type="tel" name="tel" id="tel">
+                <input placeholder="Телефон" type="tel" name="tel" id="tel" data-phone-pattern required>
               </fieldset>
               <fieldset class="feedback__fieldset">
                 <label class="visually-hidden" for="textarea">Вопрос</label>
@@ -145,9 +157,9 @@
               <button class="feedback__button" type="submit">ЗАДАТЬ ВОПРОС</button>
               <fieldset class="feedback__fieldset">
                 <label class="feedback__approval">
-                  <input type="checkbox" name="approval">
+                  <input type="checkbox" name="approval" approval="feedback">
                   <span class="feedback__approval-control"></span>
-                  <span>Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
+                  <span text="feedback">Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
                 </label>
               </fieldset>
             </form>
@@ -193,8 +205,8 @@
             </div>
           </section>
           <section class="footer__links">
-            <!-- В мобильной версии раздел раскрывается по классу .is-open-->
-            <div class="footer__links-container">
+            <!-- В мобильной версии раздел раскрывается удалением класса .is-closed-->
+            <div class="footer__links-container is-closed">
               <h2>РАЗДЕЛЫ САЙТА</h2>
               <button class="footer__button" type="button" data-open-links="footer"><span class="visually-hidden">Раскрыть</span></button>
               <ul class="footer__links-list">
@@ -223,8 +235,8 @@
             </div>
           </section>
           <section class="footer__contacts">
-            <!-- В мобильной версии раздел раскрывается по классу .is-open-->
-            <div class="footer__contacts-container">
+            <!-- В мобильной версии раздел раскрывается удалением класса .is-closed-->
+            <div class="footer__contacts-container is-closed">
               <h2>НАШ ОФИС</h2>
               <button class="footer__button" type="button" data-open-contacts="footer"><span class="visually-hidden">Раскрыть</span></button>
               <p>г. Мытищи, Олимпийский проспект, д.10</p>
@@ -247,11 +259,11 @@
           <form class="modal__form">
             <fieldset class="modal__fieldset">
               <label class="visually-hidden" for="modal-name">Имя</label>
-              <input placeholder="Имя" type="text" name="name" id="modal-name">
+              <input placeholder="Имя" type="text" name="name" id="modal-name" required>
             </fieldset>
             <fieldset class="modal__fieldset">
               <label class="visually-hidden" for="modal-tel">Телефон</label>
-              <input placeholder="Телефон" type="tel" name="tel" id="modal-tel">
+              <input placeholder="Телефон" type="tel" name="tel" id="modal-tel" data-phone-pattern required>
             </fieldset>
             <fieldset class="modal__fieldset">
               <label class="visually-hidden" for="modal-textarea">Вопрос</label>
@@ -260,9 +272,9 @@
             <button class="modal__button" type="submit">ОТПРАВИТЬ</button>
             <fieldset class="modal__fieldset">
               <label class="modal__approval">
-                <input type="checkbox" name="approval">
+                <input type="checkbox" name="approval" approval>
                 <span class="modal__approval-control"></span>
-                <span>Я согласен на обработку персональных данных</span>
+                <span text>Я согласен на обработку персональных данных</span>
               </label>
             </fieldset>
           </form>

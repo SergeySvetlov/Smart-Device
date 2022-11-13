@@ -118,6 +118,7 @@
     border: none;
     border-radius: 3px;
     padding: 15px 25px 11px 25px;
+    cursor: pointer;
 
     &:hover {
       opacity: 0.8;
@@ -153,12 +154,17 @@
       opacity: 0.8;
     }
 
+    & span.error {
+      color: $color-torch-red;
+    }
+
     & .feedback__approval-control {
       position: relative;
       width: 15px;
       height: 15px;
       border: 1px solid $color-default-white;
       border-radius: 3px;
+      cursor: pointer;
     }
 
     & input[type="checkbox"]:checked + .feedback__approval-control::after {
@@ -231,14 +237,14 @@
         font-size: 30px;
         line-height: 42.19px;
         min-width: 270px;
-        margin: 0 0 20px 0;
+        margin: 0 0 6px 0;
       }
 
       & p {
         font-size: 14px;
         line-height: 18.82px;
         min-width: 270px;
-        margin: 0 0 40px 0;
+        margin: 0 0 30px 0;
       }
     }
 
@@ -250,6 +256,7 @@
       & textarea {
         width: 270px;
         height: 180px;
+        padding: 28px 15px 15px 15px;
       }
     }
 
@@ -259,7 +266,7 @@
     }
 
     &__approval {
-      padding: 0;
+      padding: 0 0 0 5px;
       margin: 0 auto 0 auto;
     }
   }
