@@ -30,18 +30,9 @@ html {
 
 body {
   width: 100%;
-  min-width: 1920px;
+  min-width: 320px;
   height: 100%;
-
   background-color: $color-background-alice-blue;
-
-  @include vp-1023 {
-    min-width: 770px;
-  }
-
-  @include vp-767 {
-    min-width: 320px;
-  }
 }
 
 a {

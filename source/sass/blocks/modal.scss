@@ -56,6 +56,8 @@
   }
 
   &__content {
+    width: 100%;
+    max-width: 500px;
     position: relative;
     background-color: $color-deep-sky-blue;
     border-radius: 3px;
@@ -68,22 +70,23 @@
     font-weight: 400;
     font-size: 30px;
     line-height: 42.19px;
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
     margin: 0 0 6px 0;
   }
 
   & p {
     display: block;
-    width: 380px;
+    width: 100%;
+    max-width: 380px;
     margin: 0 0 38px 0;
   }
 
   &__form {
-    display: flex;
-    flex-wrap: wrap;
-    align-content: flex-start;
+    display: grid;
     margin: 0 auto;
-    width: 420px;
+    width: 100%;
+    max-width: 420px;
     padding: 0;
   }
 
@@ -93,7 +96,8 @@
     padding: 0;
 
     & input {
-      width: 420px;
+      width: 100%;
+      max-width: 420px;
       height: 50px;
       border: none;
       border-radius: 3px;
@@ -118,7 +122,8 @@
 
     & textarea {
       display: block;
-      width: 420px;
+      width: 100%;
+      max-width: 420px;
       height: 155px;
       border: none;
       border-radius: 3px;
@@ -150,7 +155,8 @@
     text-align: center;
     color: $color-default-white;
     background-color: $color-black-pearl-2;
-    width: 420px;
+    width: 100%;
+    max-width: 420px;
     height: max-content;
     border: none;
     border-radius: 3px;
@@ -165,7 +171,8 @@
   &__approval {
     display: flex;
     word-wrap: break-word;
-    width: 420px;
+    width: 100%;
+    max-width: 420px;
     align-items: center;
     padding: 0 0 0 9px;
 

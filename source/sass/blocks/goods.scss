@@ -1,6 +1,6 @@
 .goods {
   background-color: $color-black-pearl;
-  padding: 65px 0 140px 0;
+  padding: 65px 0 142px 0;
   margin: 0;
 
   & .container {
@@ -11,7 +11,8 @@
     font-family: $ff-RobotoCondensed;
     font-size: 36px;
     line-height: 51px;
-    width: 800px;
+    width: 100%;
+    max-width: 800px;
     margin: 0 0 50px 0;
   }
 
@@ -20,13 +21,13 @@
     margin: 0;
     list-style-type: none;
     display: grid;
-    grid-template-columns: 350px 350px 350px;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: 85px;
   }
 
   &__link {
     padding: 50px 0 0 40px;
-    width: 350px;
+    width: 100%;
     height: 650px;
     display: flex;
     flex-direction: column;

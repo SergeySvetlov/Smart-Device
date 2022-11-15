@@ -1,24 +1,17 @@
 .container {
-  //width: 67.81%;
-  //min-width: 1024px;
-  width: 1302px;
-  max-width: 1920px;
+  min-width: 320px;
+  max-width: 1302px;
+  width: 100%;
   margin: 0 auto;
   padding: 0 40px;
 
   @include vp-1023 {
-    width: 75.27%;
-    min-width: 768px;
-    max-width: 1023px;
-    //width: 770px;
+    max-width: 770px;
     padding: 0 50px;
   }
 
   @include vp-767 {
-    width: 41.72%;
-    min-width: 320px;
-    max-width: 767px;
-    //width: 320px;
+    max-width: 320px;
     padding: 0 25px;
   }
 }
