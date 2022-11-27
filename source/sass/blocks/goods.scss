@@ -100,7 +100,6 @@
     }
 
     &__link {
-      width: 670px;
       padding: 35px 0 0 45px;
       height: 250px;
     }
@@ -133,17 +132,20 @@
     & p {
       font-size: 28px;
       line-height: 39.38px;
-      width: 260px;
-      margin: 0 0 28px 0;
+      width: 100%;
+      max-width: 600px;
+      padding: 0 10px 0 0;
+      margin: 0 auto 28px auto;
     }
 
     &__list {
-      grid-template-columns: 270px;
+      grid-template-columns: 1fr;
     }
 
     &__link {
+      margin: 0 auto;
+      max-width: 600px;
       padding: 26px 0 0 30px;
-      width: 270px;
       height: 250px;
     }
 

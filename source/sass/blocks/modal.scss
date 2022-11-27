@@ -214,6 +214,10 @@
       height: 6px;
       background-image: url("../img/svg/mark.svg");
     }
+
+    & input[type="checkbox"]:focus + .modal__approval-control {
+      border-color: $color-default-black;
+    }
   }
 
   &__close-btn {

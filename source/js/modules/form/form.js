@@ -21,18 +21,11 @@ const checkForm = () => {
 document.addEventListener('DOMContentLoaded', function () {
   let eventCalllback = function (e) {
     let el = e.target;
-    let clearVal = el.dataset.phoneClear;
     let pattern = el.dataset.phonePattern;
     let matrix = pattern ? pattern : MATRIX_DEF;
     let i = 0;
     let def = matrix.replace(/\D/g, '');
     let val = e.target.value.replace(/\D/g, '');
-    if (clearVal !== 'false' && e.type === 'blur') {
-      if (val.length < matrix.match(/([\_\d])/g).length) {
-        e.target.value = '';
-        return;
-      }
-    }
     if (def.length >= val.length) {
       val = def;
     }

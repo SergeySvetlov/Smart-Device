@@ -23,22 +23,28 @@
               <img class="header__logo-img" src="img/svg/smart-device-logo-desktop.svg" width="215" height="55" alt="Логотип «Smart Device»" />
             </picture>
           </a>
-          <a class="header__link" href="#">
-            <span class="header__link-icon">
-              <svg class="header__link-svg" width="21" height="20" viewBox="0 0 21 20" xmlns="http://www.w3.org/2000/svg">
-                <use xlink:href="img/sprite/sprite.svg#email"></use>
-              </svg>
-            </span>
-            <span>info@sd.ru</span>
-          </a>
-          <a class="header__link" href="tel:+74950005252">
-            <span class="header__link-icon">
-              <svg class="header__link-svg" width="21" height="20" viewBox="0 0 21 20" xmlns="http://www.w3.org/2000/svg">
-                <use xlink:href="img/sprite/sprite.svg#phone-call"></use>
-              </svg>
-            </span>
-            <span>+7 (495) 000 52 52</span>
-          </a>
+          <ul class="header__links-list">
+            <li class="header__links-item">
+              <a class="header__link" href="mailto:info@sd.ru">
+                <span class="header__link-icon">
+                  <svg class="header__link-svg" width="21" height="20" viewBox="0 0 21 20" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite/sprite.svg#email"></use>
+                  </svg>
+                </span>
+                <span>info@sd.ru</span>
+              </a>
+            </li>
+            <li class="header__links-item">
+              <a class="header__link" href="tel:+74950005252">
+                <span class="header__link-icon">
+                  <svg class="header__link-svg" width="21" height="20" viewBox="0 0 21 20" xmlns="http://www.w3.org/2000/svg">
+                    <use xlink:href="img/sprite/sprite.svg#phone-call"></use>
+                  </svg>
+                </span>
+                <span>+7 (495) 000 52 52</span>
+              </a>
+            </li>
+          </ul>
           <a class="header__button" href="#" data-open-modal="feedback">ЗАКАЗАТЬ ЗВОНОК</a>
         </div>
       </header>
@@ -95,7 +101,7 @@
               <li class="goods__item">
                 <a class="goods__link" href="#">
                   <picture>
-                    <source type="image/webp" srcset="img/background.webp, background2x.webp 2x">
+                    <source type="image/webp" srcset="img/background.webp, img/background@2x.webp 2x">
                     <img class="goods__img goods__img--first" src="img/background.jpg" width="1920" height="880" srcset="img/background@2x.jpg 2x" alt="печатная плата" />
                   </picture>
                   <h3>Производство печатных плат</h3>
@@ -107,9 +113,9 @@
                 </a>
               </li>
               <li class="goods__item">
-                <a class="goods__link">
+                <a class="goods__link" href="#">
                   <picture>
-                    <source type="image/webp" srcset="img/background.webp, background2x.webp 2x">
+                    <source type="image/webp" srcset="img/background.webp, img/background@2x.webp 2x">
                     <img class="goods__img goods__img--second" src="img/background.jpg" width="1920" height="880" srcset="img/background@2x.jpg 2x" alt="печатная плата" />
                   </picture>
                   <h3>Монтаж печатных плат</h3>
@@ -121,9 +127,9 @@
                 </a>
               </li>
               <li class="goods__item">
-                <a class="goods__link">
+                <a class="goods__link" href="#">
                   <picture>
-                    <source type="image/webp" srcset="img/background.webp, background2x.webp 2x">
+                    <source type="image/webp" srcset="img/background.webp, img/background@2x.webp 2x">
                     <img class="goods__img goods__img--third" src="img/background.jpg" width="1920" height="880" srcset="img/background@2x.jpg 2x" alt="печатная плата" />
                   </picture>
                   <h3>Комплектующие для светотехники</h3>
@@ -206,9 +212,9 @@
           </section>
           <section class="footer__links">
             <!-- В мобильной версии раздел раскрывается удалением класса .is-closed-->
-            <div class="footer__links-container is-closed">
+            <div class="footer__links-container" data-open-links="footer">
               <h2>РАЗДЕЛЫ САЙТА</h2>
-              <button class="footer__button" type="button" data-open-links="footer"><span class="visually-hidden">Раскрыть</span></button>
+              <button class="footer__button" type="button"><span class="visually-hidden">Раскрыть</span></button>
               <ul class="footer__links-list">
                 <li class="footer__links-item">
                   <a class="footer__link" href="#">О Компании</a>
@@ -236,9 +242,9 @@
           </section>
           <section class="footer__contacts">
             <!-- В мобильной версии раздел раскрывается удалением класса .is-closed-->
-            <div class="footer__contacts-container is-closed">
+            <div class="footer__contacts-container" data-open-contacts="footer">
               <h2>НАШ ОФИС</h2>
-              <button class="footer__button" type="button" data-open-contacts="footer"><span class="visually-hidden">Раскрыть</span></button>
+              <button class="footer__button" type="button"><span class="visually-hidden">Раскрыть</span></button>
               <p>г. Мытищи, Олимпийский проспект, д.10</p>
               <a href="tel:+74955894050">+7 (495) 589-40-50</a>
               <a href="tel:+79253895829">+7 (925) 389-58-29</a>

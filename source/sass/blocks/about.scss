@@ -2,20 +2,16 @@
   margin: 0 0 100px 0;
 
   & .container {
+    min-height: 320px;
+    padding: 0 40px 0 290px;
     background-image: url("../img/2022.png");
     background-position: 40px top;
     background-repeat: no-repeat;
-    min-height: 320px;
-    padding: 0 40px 0 290px;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/2022@2x.png");
-      background-size: 150px auto;
-    }
   }
 
   & h2 {
     font-family: $ff-RobotoCondensed;
+    font-weight: 400;
     font-size: 36px;
     line-height: 50.63px;
     margin: 0 0 13px 0;
@@ -56,6 +52,19 @@
   }
 }
 
+@include vp-1919 {
+  .about {
+    & .container {
+      background-image: url("../img/2022.png");
+
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/2022@2x.png");
+        background-size: 150px auto;
+      }
+    }
+  }
+}
+
 @include vp-1023 {
   .about {
     margin: 0 0 80px 0;
@@ -86,13 +95,16 @@
 
     & .container {
       background-image: none;
-      min-height: 305px;
+      min-height: 100%;
       padding: 0 25px;
+
+      @media (min-resolution: 2dppx) {
+        background-image: none;
+      }
     }
 
     & h2 {
       font-family: $ff-RobotoCondensed;
-      font-weight: 400;
       font-size: 28px;
       line-height: 39.38px;
       margin: 0 0 12px 0;

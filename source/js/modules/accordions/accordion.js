@@ -30,9 +30,11 @@ const initDetails = () => {
 };
 
 const onLinkButtonClick = () => {
+  linksButton.classList.add('is-closed');
   linksButton.addEventListener('click', initLinks);
 };
 const onContactsButtonClick = () => {
+  contactsButton.classList.add('is-closed');
   contactsButton.addEventListener('click', initContacts);
 };
 

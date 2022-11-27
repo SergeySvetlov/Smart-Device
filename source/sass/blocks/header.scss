@@ -6,7 +6,8 @@
 
   .container {
     display: flex;
-    padding: 30px 40px 35px 40px;
+    justify-content: space-between;
+    padding: 30px 102px 35px 40px;
     align-items: center;
   }
 
@@ -14,15 +15,23 @@
     display: block;
     width: 215px;
     height: 55px;
-    margin: 0 150px 0 0;
+  }
+
+  &__links-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    min-width: 485px;
+    max-width: 770px;
+    padding: 0 4px 6px 0;
+    margin: 0;
   }
 
   &__link {
+    width: min-content;
     display: flex;
     height: min-content;
     align-items: center;
-    width: 225px;
-    margin: 0 30px 0 0;
   }
 
   &__link-svg {
@@ -39,19 +48,19 @@
 
   &__link-icon + span {
     display: block;
+    min-width: max-content;
     line-height: 18px;
-    padding: 0 0 0 5px;
+    padding: 0 10px 0 5px;
   }
 
   &__button {
     font-family: $ff-RobotoCondensed;
     font-size: 14px;
     line-height: 16px;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.06em;
     text-align: center;
-    width: 160px;
-    padding: 10px 15px 10px 15px;
-    margin: 0 0 0 125px;
+    padding: 10px 16px 10px 17px;
+    margin: -5px 0 0 0;
     border-radius: 3px;
     border: 1px solid $color-alice-blue;
     display: block;
@@ -60,12 +69,23 @@
 
 @include vp-1023 {
   .header {
+    position: absolute;
     .container {
       padding: 20px 50px 25px 50px;
     }
 
     &__logo {
       margin: 0 auto 0 0;
+    }
+
+    &__links-list {
+      max-width: 200px;
+      min-width: 100px;
+      padding: 0 0 3px 0;
+    }
+
+    &__links-item {
+      min-width: min-content;
     }
 
     &__link {
@@ -86,7 +106,6 @@
 @include vp-767 {
   .header {
     .container {
-      max-width: 320px;
       padding: 16px 15px 20px 26px;
     }
 

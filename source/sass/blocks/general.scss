@@ -88,7 +88,6 @@
   .general {
     background-image: url("../img/background-mobile.jpg");
     min-height: 560px;
-    width: 320px;
     padding: 150px 0 190px 0;
     margin: 0 auto 50px auto;
     background-position: left top;
@@ -106,13 +105,14 @@
       font-size: 36px;
       line-height: 42.19px;
       margin: 0 0 8px 0;
+      max-width: 100%;
       letter-spacing: 0;
     }
 
     & p {
       font-size: 14px;
       line-height: 21.7px;
-      width: 271px;
+      max-width: 100%;
       margin: 0 0 44px 0;
     }
 
@@ -120,7 +120,7 @@
       font-size: 14px;
       letter-spacing: 0.05em;
       line-height: 16.41px;
-      min-width: 270px;
+      max-width: 270px;
       padding: 13px 35px 11px 40px;
       margin: 0;
     }
