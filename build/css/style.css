@@ -445,6 +445,7 @@ body {
 a {
   color: #f2f5f6;
   text-decoration: none;
+  word-break: break-all;
 }
 
 a:hover {
@@ -1046,9 +1047,9 @@ button,
 
 .header__link-icon + span {
   display: block;
-  min-width: -webkit-max-content;
-  min-width: -moz-max-content;
-  min-width: max-content;
+  min-width: 189px;
+  max-width: 100%;
+  word-wrap: break-word;
   line-height: 18px;
   padding: 0 10px 0 5px;
 }

@@ -37,6 +37,7 @@ body {
 a {
   color: $color-alice-blue;
   text-decoration: none;
+  word-break: break-all;
 
   &:hover {
     opacity: 0.8;
