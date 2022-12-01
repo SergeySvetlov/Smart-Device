@@ -102,7 +102,7 @@
                 <a class="goods__link" href="#">
                   <picture>
                     <source type="image/webp" srcset="img/background.webp, img/background@2x.webp 2x">
-                    <img class="goods__img goods__img--first" src="img/background.jpg" width="1920" height="880" srcset="img/background@2x.jpg 2x" alt="печатная плата" />
+                    <img class="goods__img goods__img--first" src="img/background.jpg" width="910" height="607" srcset="img/background@2x.jpg 2x" alt="печатная плата" />
                   </picture>
                   <h3>Производство печатных плат</h3>
                   <div class="goods__button">
@@ -116,7 +116,7 @@
                 <a class="goods__link" href="#">
                   <picture>
                     <source type="image/webp" srcset="img/background.webp, img/background@2x.webp 2x">
-                    <img class="goods__img goods__img--second" src="img/background.jpg" width="1920" height="880" srcset="img/background@2x.jpg 2x" alt="печатная плата" />
+                    <img class="goods__img goods__img--second" src="img/background.jpg" width="910" height="607" srcset="img/background@2x.jpg 2x" alt="печатная плата" />
                   </picture>
                   <h3>Монтаж печатных плат</h3>
                   <div class="goods__button">
@@ -130,7 +130,7 @@
                 <a class="goods__link" href="#">
                   <picture>
                     <source type="image/webp" srcset="img/background.webp, img/background@2x.webp 2x">
-                    <img class="goods__img goods__img--third" src="img/background.jpg" width="1920" height="880" srcset="img/background@2x.jpg 2x" alt="печатная плата" />
+                    <img class="goods__img goods__img--third" src="img/background.jpg" width="910" height="607" srcset="img/background@2x.jpg 2x" alt="печатная плата" />
                   </picture>
                   <h3>Комплектующие для светотехники</h3>
                   <div class="goods__button">
@@ -154,20 +154,20 @@
               </fieldset>
               <fieldset class="feedback__fieldset">
                 <label class="visually-hidden" for="tel">Телефон</label>
-                <input placeholder="Телефон" type="tel" name="tel" id="tel" data-phone-pattern required>
+                <input placeholder="Телефон" type="tel" name="tel" id="tel" minlength="16" data-phone-pattern required>
               </fieldset>
               <fieldset class="feedback__fieldset feedback__fieldset--textarea">
                 <label class="visually-hidden" for="textarea">Вопрос</label>
                 <textarea placeholder="Ваш вопрос" name="textarea" id="textarea"></textarea>
               </fieldset>
-              <button class="feedback__button" type="submit">ЗАДАТЬ ВОПРОС</button>
-              <fieldset class="feedback__fieldset">
+              <fieldset class="feedback__fieldset feedback__fieldset--checkbox">
                 <label class="feedback__approval">
                   <input type="checkbox" name="approval" approval="feedback">
                   <span class="feedback__approval-control"></span>
                   <span text="feedback">Я&nbsp;согласен на&nbsp;обработку персональных данных</span>
                 </label>
               </fieldset>
+              <button class="feedback__button" type="submit">ЗАДАТЬ ВОПРОС</button>
             </form>
           </div>
         </section>
@@ -269,20 +269,20 @@
             </fieldset>
             <fieldset class="modal__fieldset">
               <label class="visually-hidden" for="modal-tel">Телефон</label>
-              <input placeholder="Телефон" type="tel" name="tel" id="modal-tel" data-phone-pattern required>
+              <input placeholder="Телефон" type="tel" name="tel" id="modal-tel" minlength="16" modal-phone-pattern required>
             </fieldset>
             <fieldset class="modal__fieldset">
               <label class="visually-hidden" for="modal-textarea">Вопрос</label>
               <textarea placeholder="Ваш вопрос" name="textarea" id="modal-textarea"></textarea>
             </fieldset>
-            <button class="modal__button" type="submit">ОТПРАВИТЬ</button>
-            <fieldset class="modal__fieldset">
+            <fieldset class="modal__fieldset modal__fieldset--checkbox">
               <label class="modal__approval">
-                <input type="checkbox" name="approval" approval>
+                <input type="checkbox" name="approval" approval required>
                 <span class="modal__approval-control"></span>
                 <span text>Я согласен на обработку персональных данных</span>
               </label>
             </fieldset>
+            <button class="modal__button" type="submit">ОТПРАВИТЬ</button>
           </form>
         </div>
       </div>

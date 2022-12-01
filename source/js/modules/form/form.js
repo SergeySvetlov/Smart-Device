@@ -1,45 +1,19 @@
-const MATRIX_DEF = '+7(___) ___-__-__';
-
-const phoneInputs = document.querySelectorAll('[data-phone-pattern]');
-const form = document.querySelector('form');
-const text = document.querySelectorAll('[text]');
-const approval = document.querySelector('[approval]');
+import IMask from 'imask';
 
 const checkForm = () => {
-  if (form !== null && text !== null && approval !== null) {
-    form.addEventListener('submit', function (event) {
-      if (approval.checked === false) {
-        text.forEach((el) => {
-          el.classList.add('error');
-        });
-        event.preventDefault();
-      }
-    });
-  }
+  let element = document.querySelector('[data-phone-pattern]');
+  let maskOptions = {
+    mask: '+{7}(000)000-00-00',
+  };
+  let mask = IMask(element, maskOptions);
 };
 
-document.addEventListener('DOMContentLoaded', function () {
-  let eventCalllback = function (e) {
-    let el = e.target;
-    let pattern = el.dataset.phonePattern;
-    let matrix = pattern ? pattern : MATRIX_DEF;
-    let i = 0;
-    let def = matrix.replace(/\D/g, '');
-    let val = e.target.value.replace(/\D/g, '');
-    if (def.length >= val.length) {
-      val = def;
-    }
-    e.target.value = matrix.replace(/./g, function (a) {
-      return /[_\d]/.test(a) && i < val.length ? val.charAt(i++) : i >= val.length ? "" : a;
-    });
+const checkModalForm = () => {
+  let element = document.querySelector('[modal-phone-pattern]');
+  let maskOptions = {
+    mask: '+{7}(000)000-00-00',
   };
-  if (phoneInputs !== null) {
-    for (let elem of phoneInputs) {
-      for (let ev of ['input', 'blur', 'focus']) {
-        elem.addEventListener(ev, eventCalllback);
-      }
-    }
-  }
-});
+  let mask = IMask(element, maskOptions);
+};
 
-export {checkForm};
+export {checkForm, checkModalForm};

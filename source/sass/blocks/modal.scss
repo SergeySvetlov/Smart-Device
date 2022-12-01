@@ -145,6 +145,10 @@
         color: $color-default-white;
       }
     }
+
+    &--checkbox {
+      order: 1;
+    }
   }
 
   &__button {

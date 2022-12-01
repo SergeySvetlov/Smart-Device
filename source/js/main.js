@@ -3,7 +3,7 @@ import {initModals} from './modules/modals/init-modals';
 import {onLinkButtonClick, onContactsButtonClick, onDetailsButtonClick} from './modules/accordions/accordion';
 import {editText} from './modules/mobile/mobile';
 import {animateAnchors} from './modules/anchor/anchor';
-import {checkForm} from './modules/form/form';
+import {checkForm, checkModalForm} from './modules/form/form';
 
 // ---------------------------------
 
@@ -27,6 +27,7 @@ window.addEventListener('DOMContentLoaded', () => {
     onDetailsButtonClick();
     animateAnchors();
     checkForm();
+    checkModalForm();
   });
 });
 

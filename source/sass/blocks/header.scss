@@ -2,7 +2,7 @@
   background: linear-gradient(180deg, $color-black-pearl 85%, $color-transparent 100%);
   position: fixed;
   width: 100%;
-  z-index: 1;
+  z-index: 2;
 
   .container {
     display: flex;
@@ -22,7 +22,7 @@
     flex-wrap: wrap;
     justify-content: space-between;
     min-width: 485px;
-    max-width: 770px;
+    max-width: 500px;
     padding: 0 4px 6px 0;
     margin: 0;
   }
